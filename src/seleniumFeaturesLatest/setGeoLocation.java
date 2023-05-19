@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
@@ -30,24 +30,25 @@ public class setGeoLocation {
 		
 		Map<String,Object> coordinates =new HashMap<String,Object>();
 		
-		//coordinates.put("latitude", 38.9072);
-		//coordinates.put("longitude", -77.0369);
-		//coordinates.put("accuracy", 100);
-		
-		coordinates.put("latitude", 40.416775);
-		coordinates.put("longitude", 3.703790);
+		coordinates.put("latitude", 38.9072);
+		coordinates.put("longitude", -77.0369);
 		coordinates.put("accuracy", 100);
+		
+		//coordinates.put("latitude", 40.416775);
+		//coordinates.put("longitude", 3.703790);
+		//coordinates.put("accuracy", 100);
 		
 		driver.executeCdpCommand("Emulation.setGeolocationOverride", coordinates);
 		
-		driver.get("https://www.google.com/");
-		//driver.get("https://locations.kfc.com/search");
+		//driver.get("https://www.google.com/");
+		driver.get("https://locations.kfc.com/search");
 		
-		//Thread.sleep(2000);
+		Thread.sleep(2000);
 		
-		//WebElement elem = driver.findElement(By.cssSelector(".Locator-button.js-locator-geolocateTrigger"));
+		WebElement elem = driver.findElement(By.cssSelector(".Locator-button.js-locator-geolocateTrigger"));
 
-		//elem.click();
+		elem.click();
+		/*
 		driver.findElement(By.name("q")).sendKeys("netflix",Keys.ENTER);
 		Thread.sleep(3000);
 		
@@ -57,7 +58,7 @@ public class setGeoLocation {
 		
 		 System.out.println(title);
 		
-
+        */
 	}
 
 }
