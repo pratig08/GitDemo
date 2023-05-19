@@ -59,6 +59,8 @@ public class setGeoLocation {
 		 System.out.println(title);
 		
         */
+		
+		System.out.println("Locations found");
 	}
 
 }
