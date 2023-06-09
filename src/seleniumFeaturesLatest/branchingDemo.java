@@ -15,8 +15,7 @@ public class branchingDemo {
 	    System.out.println("Developbranch one: GitStuff");
 	    System.out.println("Developbranch two: GitStuff");
 	    System.out.println("Developbranch three: GitStuff");
-	    
-
+	    System.out.println("Developbranch four: GitStuff");
      
 	}
 
